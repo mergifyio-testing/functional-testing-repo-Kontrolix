@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    merge:
+      method: merge
+  conditions:
+  - label=go_merge
+  name: Merge on main
