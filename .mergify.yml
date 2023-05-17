@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20230517090738/test_sha_collision_after_pr_synchronization/main
+  - label=queue
+  name: default merge
+queue_rules:
+- conditions:
+  - label=queue
+  name: default
