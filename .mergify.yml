@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - label=go_merge
+  name: Merge on main
+queue_rules:
+- allow_inplace_checks: false
+  merge_method: merge
+  name: default
