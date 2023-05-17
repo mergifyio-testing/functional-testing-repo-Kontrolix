@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - label=go_queue
+  name: Merge on main
+queue_rules:
+- conditions:
+  - status-success=continuous-integration/fake-ci
+  merge_method: merge
+  name: default
