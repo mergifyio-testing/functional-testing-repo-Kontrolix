@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - label=queue
+  name: default merge
+queue_rules:
+- merge_conditions:
+  - base=20230530153816/test_stacked_pr_detection/main
+  name: default
