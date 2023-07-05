@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20230705071512/test_schedule_detection/main
+  - label=foobar
+  name: queue
+queue_rules:
+- conditions:
+  - or:
+    - 'schedule: MON-FRI 08:00-17:00'
+    - label=foobar
+  name: default
