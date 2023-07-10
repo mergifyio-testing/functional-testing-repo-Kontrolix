@@ -1,0 +1,14 @@
+
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - 20230710130228/test_log_downloading/main
+
+jobs:
+  unit-tests:
+    timeout-minutes: 5
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "toto - uuid : f015bbb2-0bb6-4140-8418-52f4716a3410"
