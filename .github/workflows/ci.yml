@@ -1,0 +1,11 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      run: echo toto
+      uses: actions/checkout@v2
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230713094305/test_log_downloading/main
