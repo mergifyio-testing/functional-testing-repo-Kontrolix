@@ -1,0 +1,14 @@
+
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - 20230713081113/test_log_embedding/main
+
+jobs:
+  unit-tests:
+    timeout-minutes: 5
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: "echo toto - uuid : f8bc128e-5fba-4c1a-9314-e4c6dcb86893"
