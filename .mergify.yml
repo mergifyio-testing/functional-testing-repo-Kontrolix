@@ -1,0 +1,18 @@
+pull_request_rules:
+- actions:
+    queue: ''
+  conditions:
+  - base=20230808142344/test_the_head_of_train_is_not_the_expected_pull_request/main
+  name: default merge
+queue_rules:
+- merge_conditions:
+  - check-success=continuous-integration/fake-ci
+  name: urgent
+  queue_conditions:
+  - label=urgent
+- merge_conditions:
+  - check-success=continuous-integration/fake-ci
+  name: standard
+  queue_conditions:
+  - label=queue
+  - label!=urgent
