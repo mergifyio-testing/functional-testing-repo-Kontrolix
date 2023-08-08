@@ -1,0 +1,9 @@
+jobs:
+  my_one_minute_CI:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: sleep 60
+    timeout-minutes: 5
+name: Continuous Integration
+'on': push
