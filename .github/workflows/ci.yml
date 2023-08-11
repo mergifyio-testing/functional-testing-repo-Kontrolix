@@ -1,0 +1,11 @@
+jobs:
+  fake-ci:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230811074627/test_batch_max_failure_resolution_attempts/main
