@@ -1,0 +1,12 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: echo toto
+    - step_that_fails: echo I will faile;exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230823143955/test_log_downloading/main
