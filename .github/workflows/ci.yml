@@ -1,0 +1,16 @@
+jobs:
+  strategy:
+    matrix:
+      version:
+      - 2.8
+      - 3.5
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: rub version $matrix.version
+      run: 'echo Version: $matrix.version'
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230927071153/test_log_embedding_matrix/main
