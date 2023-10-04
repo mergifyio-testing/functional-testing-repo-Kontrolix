@@ -1,0 +1,13 @@
+flaky_checks_rerun_rules:
+  unit-tests: 2
+pull_request_rules:
+- actions:
+    queue:
+      name: foo
+  conditions:
+  - base=20231004040021/test_no_name_for_now/main
+  name: queue
+queue_rules:
+- merge_conditions:
+  - check-success=unit-tests
+  name: foo
