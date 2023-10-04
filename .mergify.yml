@@ -1,0 +1,14 @@
+flaky_checks_rerun_rules:
+  unit-tests: 2
+pull_request_rules:
+- actions:
+    queue:
+      name: foo
+  conditions:
+  - base=20231004032518/test_no_name_for_now/main
+  - check-success=Continuous Integration/unit-tests
+  name: queue
+queue_rules:
+- merge_conditions:
+  - check-success=Continuous Integration/unit-tests
+  name: foo
