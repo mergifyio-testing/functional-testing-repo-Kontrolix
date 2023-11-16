@@ -4,7 +4,7 @@ pull_request_rules:
       name: queue_2
   conditions:
   - base=20231116141058/test_queue_rule_changed/main
-  name: default merge
+  name: toto
 queue_rules:
 - merge_conditions:
   - base=20231116141058/test_queue_rule_changed/main
