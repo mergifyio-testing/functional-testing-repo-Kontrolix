@@ -1,16 +1,12 @@
 pull_request_rules:
 - actions:
     queue:
-      name: queue_2
+      name: queue_1
   conditions:
   - base=20231116165118/test_queue_rule_vanish/main
-  name: default merge
+  name: toto
 queue_rules:
 - merge_conditions:
   - base=20231116165118/test_queue_rule_vanish/main
   - check-success=continuous-integration/fake-ci
   name: queue_1
-- merge_conditions:
-  - base=20231116165118/test_queue_rule_vanish/main
-  - check-success=continuous-integration/fake-ci
-  name: queue_2
