@@ -1,10 +1,10 @@
 pull_request_rules:
 - actions:
     queue:
-      name: queue_2
+      name: queue_1
   conditions:
   - base=20231116163720/test_queue_rule_changed/main
-  name: default merge
+  name: toto
 queue_rules:
 - merge_conditions:
   - base=20231116163720/test_queue_rule_changed/main
@@ -13,4 +13,4 @@ queue_rules:
 - merge_conditions:
   - base=20231116163720/test_queue_rule_changed/main
   - check-success=continuous-integration/fake-ci
-  name: queue_2
+  name: queue_3
